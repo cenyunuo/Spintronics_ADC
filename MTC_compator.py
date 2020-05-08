@@ -113,8 +113,12 @@ hdy=-Nyy*Ms
 hdz=-Nzz*Ms
 Hd=np.array([hdx, hdy, hdz])
 ######################## SHM parameter values #######################
-SHM_1 = SHM(120e-9,80e-9,2.8e-9)
-SHM_2 = SHM(150e-9,100e-9,2.8e-9)
+##### SHM(W,L,t)
+SHM_1 = SHM(120e-9,80e-9,2.1e-9)
+#SHM_2 = SHM(150e-9,100e-9,2.8e-9)
+
+SHM_2 = SHM(200e-9,100e-9,2.5*2.8e-9)
+
 
 A_SHM_1=SHM_1.W*SHM_1.t
 A_SHM_2=SHM_2.W*SHM_2.t
@@ -151,6 +155,10 @@ mp=[0,0.0,1.0]           # dimensionless spin current vector
 
 Is_1 = P_she_1*Ic           # spin current entering into MTJ 1
 Is_2 = P_she_2*Ic           # spin current entering into MTJ 2
+print('Is_1 = %e' %Is_1)
+print('Is_2 = %e' %Is_2)
+
+#exit()
 
 J_MTJ_1=Is_1/A_MTJ
 J_MTJ_2=Is_2/A_MTJ
