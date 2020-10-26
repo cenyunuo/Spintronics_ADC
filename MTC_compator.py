@@ -130,7 +130,7 @@ theta_SHE=0.3
 P_she_1=(A_MTJ/A_SHM_1)*theta_SHE*(1.0-sech(SHM_1.t/lambda_sf))
 P_she_2=(A_MTJ/A_SHM_2)*theta_SHE*(1.0-sech(SHM_2.t/lambda_sf))
 
-Ic = input('Enter charge current(in uA) = ')
+Ic = float(input('Enter charge current(in uA) = '))
 Ic=Ic*1e-6
 
 ###################### time related portion ###########################
